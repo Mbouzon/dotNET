@@ -115,6 +115,15 @@ namespace BznUiPath.Activities.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cep must have 8 numbers.
+        /// </summary>
+        internal static string CepLenghtValidation {
+            get {
+                return ResourceManager.GetString("CepLenghtValidation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Input.
         /// </summary>
         internal static string Input {
@@ -156,6 +165,15 @@ namespace BznUiPath.Activities.Properties {
         internal static string ParentScopeDescription {
             get {
                 return ResourceManager.GetString("ParentScopeDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Runtime error, please try again.
+        /// </summary>
+        internal static string RunTimeBuscaCepError {
+            get {
+                return ResourceManager.GetString("RunTimeBuscaCepError", resourceCulture);
             }
         }
         

@@ -165,4 +165,12 @@
     <value>Activity is only valid inside a BznUiPath Scope.</value>
     <comment>validation message</comment>
   </data>
+  <data name="CepLenghtValidation" xml:space="preserve">
+    <value>Cep must have 8 numbers</value>
+    <comment>validation error</comment>
+  </data>
+  <data name="RunTimeBuscaCepError" xml:space="preserve">
+    <value>Runtime error, please try again</value>
+    <comment>validation message</comment>
+  </data>
 </root>

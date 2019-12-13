@@ -57,10 +57,13 @@ namespace BznUiPath.Activities
             var property = context.DataContext.GetProperties()[ParentScope.ApplicationTag];
             var app = property.GetValue(context.DataContext) as Application;
 
-            var cep = Cep.Get(context);
+            string cep = Cep.Get(context);
+            if (cep.Length != 8)
+                throw new FormatException(string.Format(Resources.CepLenghtValidation));
+
 
             var clientWeb = new System.Net.WebClient();
-            var json_data = string.Empty;
+            string json_data = string.Empty;
             Address address = null;
 
             try
@@ -70,7 +73,9 @@ namespace BznUiPath.Activities
                 //JObject jj = JObject.Parse(json_data);
                 address = JsonConvert.DeserializeObject<Address>(json_data);
             }
-            catch (Exception) { }
+            catch (Exception) {
+                throw new Exception(string.Format(Resources.RunTimeBuscaCepError));
+            }
 
             return ctx => {
                 Result.Set(ctx, address);
