@@ -72,6 +72,8 @@ namespace BznUiPath.Activities
                 json_data = clientWeb.DownloadString("https://viacep.com.br/ws/" + cep + "/json/");
                 //JObject jj = JObject.Parse(json_data);
                 address = JsonConvert.DeserializeObject<Address>(json_data);
+
+
             }
             catch (Exception) {
                 throw new Exception(string.Format(Resources.RunTimeBuscaCepError));
